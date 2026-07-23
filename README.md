@@ -13,6 +13,32 @@ A Next.js application.
 - **Playwright** — e2e in `e2e/`
 - **Zod** — validated env in `lib/env.ts`; model ids in `lib/ai/config.ts`, never hardcoded
 
+## Toolchain
+
+Node `>=22.13` and pnpm `>=11` (pinned via `packageManager` and `.nvmrc`). With nvm:
+
+```bash
+nvm use             # reads .nvmrc
+corepack enable     # activates the pinned pnpm
+```
+
+## Environment
+
+Copy the example and add a key. `.env.local` is gitignored.
+
+```bash
+cp .env.example .env.local
+```
+
+| Variable | Required | Notes |
+|---|---|---|
+| `GOOGLE_GENERATIVE_AI_API_KEY` | yes, for chat | Free key from [Google AI Studio](https://aistudio.google.com/apikey) |
+| `GEMINI_CHAT_MODEL` | no | Defaults to `gemini-2.5-flash` |
+| `NEXT_PUBLIC_APP_URL` | no | Defaults to `http://localhost:3000` |
+
+Env is validated by Zod in `lib/env.ts`; the model id resolves through `lib/ai/config.ts`, never
+hardcoded.
+
 ## Commands
 
 ```bash
