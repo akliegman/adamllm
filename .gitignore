@@ -48,5 +48,7 @@ storybook-static
 /test-results
 
 # personal, machine-local (not committed)
+CLAUDE.md
 CLAUDE.local.md
-.claude/settings.local.json
+.claude/
+__adam/
