@@ -1,11 +1,11 @@
-import { Button } from '@/components/ui/button';
+import { Chat } from '@/features/chat';
 
 export default function Home() {
   return (
-    <main className="flex flex-1 flex-col items-center justify-center gap-6 p-8">
-      <h1 className="text-3xl font-semibold tracking-tight">adamllm</h1>
-      <p className="text-muted-foreground">Next.js, Tailwind v4, shadcn, biome, vitest, playwright, storybook.</p>
-      <Button>Get started</Button>
+    <main className="flex flex-1 flex-col items-center p-4">
+      <div className="flex h-[calc(100dvh-2rem)] w-full max-w-2xl flex-col overflow-hidden rounded-lg border">
+        <Chat />
+      </div>
     </main>
   );
 }

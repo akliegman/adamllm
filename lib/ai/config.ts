@@ -1,5 +1,6 @@
-const DEFAULT_CHAT_MODEL = 'claude-sonnet-5';
+import { google } from '@ai-sdk/google';
+import { env } from '@/lib/env';
 
-export const aiConfig = {
-  chatModel: process.env.ANTHROPIC_CHAT_MODEL ?? DEFAULT_CHAT_MODEL,
+export const models = {
+  chat: google(env.GEMINI_CHAT_MODEL),
 } as const;

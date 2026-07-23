@@ -1,7 +1,8 @@
 import { z } from 'zod';
 
 const envSchema = z.object({
-  ANTHROPIC_API_KEY: z.string().optional(),
+  GOOGLE_GENERATIVE_AI_API_KEY: z.string().optional(),
+  GEMINI_CHAT_MODEL: z.string().default('gemini-2.5-flash'),
   NEXT_PUBLIC_APP_URL: z.string().url().default('http://localhost:3000'),
 });
 
